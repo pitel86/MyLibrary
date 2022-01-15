@@ -1,0 +1,292 @@
+{
+    "App": "My Library",
+    "Elements":[{
+        "Users":[{
+            "Name":"New User",
+            "Description":"Add new user",
+            "EndPoint":"/api/users",
+            "Action":"POST",
+            "Parameters":{
+                "name":"",
+                "email":"",
+                "password":"",
+                "ownedBooks":["Book_ID"],
+                "desiredBooks":["Book_ID"]
+            },
+            "Response":{
+                "_id": "",
+                "name": "",
+                "email": "",
+                "password": "",
+                "ownedBooks":["Book_ID"],
+                "desiredBooks":["Book_ID"],
+                "createdAt": "",
+                "updatedAt": ""
+            }
+        },{
+            "Name":"Get User",
+            "Description":"Get a user",
+            "EndPoint":"/api/users/:id",
+            "Action":"GET",
+            "Authentication":{
+                "bearer":""
+            },
+            "Response":{
+                "name": "",
+                "email": "",
+                "password": "",
+                "ownedBooks":[{
+                    "_id": "",                
+                    "name": "",
+                    "description": "",
+                    "author":  "",                
+                    "category": [
+                        {
+                        "_id": "",
+                        "name":"",
+                        "description":"" 
+                        }
+                    ],
+                    "year": "",
+                    "img": "",
+                    "pdf": ""
+                    }
+                ],
+                "desiredBooks":[{
+                    "_id": "",                
+                    "name": "",
+                    "description": "",
+                    "author":  "",                
+                    "category": [
+                        {
+                        "_id": "",
+                        "name":"",
+                        "description":"" 
+                        }
+                    ],
+                    "year": "",
+                    "img": "",
+                    "pdf": ""
+                    }
+                ]
+            }
+        },{
+            "Name":"LogIn User",
+            "Description":"Log a user",
+            "EndPoint":"/api/users/login",
+            "Action":"POST",
+            "Parameters":{
+                "email":"",
+                "password":""
+            },
+            "Response":{
+                "token": ""
+            }
+        },{
+            "Name":"LogOut User",
+            "Description":"Log out a user ",
+            "EndPoint":"/api/users/login",
+            "Action":"POST",
+            "Authentication":{
+                "bearer":""
+            },
+            "Response":{
+                "token": null
+            }
+        },{
+            "Name":"Add Owned Book",
+            "Description":"Update Owned Books",
+            "EndPoint":"/api/users/addOwnedBook/:id",
+            "Action":"PATCH",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{                
+                "ownedBooks": ["Book_ID"]
+            },
+            "Response":{
+                "_id": "",
+                "name": "",
+                "email": "",
+                "password": "",
+                "ownedBooks":["Book_ID"],
+                "desiredBooks":["Book_ID"]
+            }
+        },{
+            "Name":"Add Desired Book",
+            "Description":"Update Desired Books",
+            "EndPoint":"/api/users/addDesiredBook/:id",
+            "Action":"PATCH",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{                
+                "desiredBooks": ["Book_ID"]
+            },
+            "Response":{
+                "_id": "",
+                "name": "",
+                "email": "",
+                "password": "",
+                "ownedBooks":["Book_ID"],
+                "desiredBooks":["Book_ID"]
+            }
+        }
+    ]},{
+        "Books":[{
+            "Name":"New Book",
+            "Description":"Add new Book",
+            "EndPoint":"/api/books",
+            "Action":"POST",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{
+                "name": "",
+                "description": "",
+                "author":  "",
+                "category": ["Category_ID"] ,
+                "year": "",
+                "img": "",
+                "pdf": ""
+            },
+            "Response":{
+                "_id": "",
+                "name": "",
+                "description": "",
+                "author":  "",
+                "category": ["Category_ID"] ,
+                "year": "",
+                "img": "",
+                "pdf": ""
+            }
+        },{
+            "Name":"Get Book",
+            "Description":"Get a Book",
+            "EndPoint":"/api/books/:id",
+            "Action":"GET",
+            "Response":{
+                "_id": "",                
+                "name": "",
+                "description": "",
+                "author":  "",                
+                "category": [
+                    {
+                    "_id": "",
+                    "name":"",
+                    "description":"" 
+                    }
+                ],
+                "year": "",
+                "img": "",
+                "pdf": ""
+            }
+        },{
+            "Name":"Get All Books",
+            "Description":"Get all Books",
+            "EndPoint":"/api/books",
+            "Action":"GET",
+            "Response":{
+                "_id": "",                
+                "name": "",
+                "description": "",
+                "author":  "",
+                "category": [
+                    {
+                    "_id": "",
+                    "name":"",
+                    "description":"" 
+                    }
+                ],
+                "year": "",
+                "img": "",
+                "pdf": ""
+            }
+        },{
+            "Name":"Update Book",
+            "Description":"Update a Book",
+            "EndPoint":"/api/books",
+            "Action":"PATCH",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{                
+                "name": "",
+                "description": "",
+                "author":  "",
+                "category": ["Category_ID"] ,
+                "year": "",
+                "img": "",
+                "pdf": ""
+            },
+            "Response":{
+                "_id": "",                
+                "name": "",
+                "description": "",
+                "author":  "",
+                "category": ["Category_ID"] ,
+                "year": "",
+                "img": "",
+                "pdf": ""
+            }
+        }
+    ]
+    },{
+        "Categories":[{
+            "Name":"New Category",
+            "Description":"Add new Category",
+            "EndPoint":"/api/categories",
+            "Action":"POST",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{
+                "name":"",
+                "description":""
+            },
+            "Response":{
+                "_id": "",
+                "name":"",
+                "description":""
+            }
+        },{
+            "Name":"Get Category",
+            "Description":"Get a Category",
+            "EndPoint":"/api/categories/:id",
+            "Action":"GET",
+            "Response":{
+                "_id": "",
+                "name":"",
+                "description":""
+            }
+        },{
+            "Name":"Get All Categories",
+            "Description":"Get all Categories",
+            "EndPoint":"/api/categories",
+            "Action":"GET",
+            "Response":{
+                "_id": "",
+                "name":"",
+                "description":""
+            }
+        },{
+            "Name":"Update Category",
+            "Description":"Update a Category",
+            "EndPoint":"/api/categories",
+            "Action":"PATCH",
+            "Authentication":{
+                "bearer":""
+            },
+            "Parameters":{
+                "name":"",
+                "description":""
+            },
+            "Response":{
+                "_id": "",
+                "name":"",
+                "description":""
+            }
+        }
+    ]
+    }]
+}
