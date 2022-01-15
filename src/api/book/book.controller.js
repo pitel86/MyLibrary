@@ -28,7 +28,7 @@ try {
 const getBook = async (req,res,next) => {
     try {
         const { id } = req.params;
-        const bookDB = await Book.findById(id)
+        const bookDB = await Book.findById(id).populate('category')
         if (!bookDB){
             return next(setError(404, 'Book not found'))
         }

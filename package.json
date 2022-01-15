@@ -1,11 +1,13 @@
 {
-  "name": "My Library",
-  "version": "0.0.0",
+  "name": "mylibrary",
+  "version": "1.0.0",
   "description": "Server libreria",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "category-seed": "node src/seeds/category.seed.js",
+    "book-seed": "node src/seeds/book.seed.js"
   },
   "keywords": [],
   "author": "Sergio Pitel",

@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8080
 const app = express()
 connectDb()
 cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
+    cloud_name: process.env.CLOUDNAME,
     api_key: process.env.API_KEY,
     api_secret: process.env.API_SECRET
 })

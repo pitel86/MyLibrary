@@ -7,4 +7,4 @@ CategoryRoutes.get('/:id', getCategory)
 CategoryRoutes.get('/', getAllCategory)
 CategoryRoutes.delete('/:id',[isAuth], deleteCategory)
 CategoryRoutes.patch('/:id',[isAuth], patchCategory)
-module.exports = CategoryRoutess
+module.exports = CategoryRoutes
